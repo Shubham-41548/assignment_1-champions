@@ -18,6 +18,7 @@ const ChampionList = ({ List, Loading, handleWatchlist, isWatchList }) => {
         handleWatchlist(watchList);
     },[watchList]);
 
+    // function to sort the list of champions
     const sortMethods = {
         none: { method: (a, b) => null },
         ascending: { method: (a, b) => (a.name > b.name ? 1 : -1) },

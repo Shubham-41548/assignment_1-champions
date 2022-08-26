@@ -7,14 +7,14 @@ class ChampionDetails extends Component {
         showModal: false
     };
 
-    //function to close the championdetails popup
+    // function to close the championdetails popup
     handleClose = () => {
         this.props.onPopupClose(false);
     }
 
     render() {
-        const{name,big_image_url,armor,armorperlevel,attackdamage,
-            attackdamageperlevel,attackrange,hpperlevel,movespeed,spellblockperlevel} ={...this.props.currentChampion};
+        const { name, big_image_url, armor, armorperlevel, attackdamage,
+            attackdamageperlevel, attackrange, hpperlevel, movespeed, spellblockperlevel } = { ...this.props.currentChampion };
         return (
             <Fragment>
                 <Modal show={this.props.showModalPopup} onHide={this.handleClose}
@@ -24,7 +24,7 @@ class ChampionDetails extends Component {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="sign-in-title">
-                        {name} 
+                            {name}
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>

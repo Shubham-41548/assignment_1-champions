@@ -5,6 +5,7 @@ import options from './data';
 const Search = ({ searchKey }) => {
     const [query, setQuery] = useState("");
 
+    // function to show suggestion list in searbar
     function OptionList(IsShow) {
         var element = document.getElementById("autocomplete-container");
         if (element) {
@@ -19,8 +20,10 @@ const Search = ({ searchKey }) => {
         }
     }
 
+    // function to close the suggestion list on body click
     document.body.addEventListener('click', myHandler);
 
+    // function to close the suggestion list
     function myHandler() {
         OptionList(0);
     };
@@ -28,12 +31,12 @@ const Search = ({ searchKey }) => {
     return (
         <div>
             <div className="form-outline">
-            <input onChange={event => {
-                OptionList(1);
-                setQuery(event.target.value)
-                searchKey(event.target.value)
-            }}
-                type="search" id="search-box" className="form-control" placeholder="Search for champions" />
+                <input onChange={event => {
+                    OptionList(1);
+                    setQuery(event.target.value)
+                    searchKey(event.target.value)
+                }}
+                    type="search" id="search-box" className="form-control" placeholder="Search for champions" />
                 <div className="autocomplete-items hide" id="autocomplete-container" >
 
                     {options.filter(Option => {

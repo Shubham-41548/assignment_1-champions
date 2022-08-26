@@ -41,7 +41,7 @@ const App = () => {
     var currentrecords = isWatchList || currentList.length > 0 ? currentList.slice(indexOfFirstRecord, indexOfLastRecord) : list.slice(indexOfFirstRecord, indexOfLastRecord);
 
     //change page
-    const paginate = (pageNumber,totalPages) => {
+    const paginate = (pageNumber, totalPages) => {
         if (pageNumber == 'previous' && currentPage != 1) {
             setcurrentPage(currentPage - 1);
         }
@@ -64,25 +64,25 @@ const App = () => {
         // Find multiple objects that satisfy condition
         if (keyword.length === 0) {
             isWatchList ? setcurrentList(watchList) : setcurrentList(list);
-            setsearchRecords([])  
+            setsearchRecords([])
         } else {
             const Searchlist = isWatchList ? watchList : list;
             filteredObj = Searchlist.filter((obj) => obj.name.toLowerCase().includes(keyword.toLowerCase()));
-            if(filteredObj.length > 0){
-                setsearchRecords(filteredObj)  
+            if (filteredObj.length > 0) {
+                setsearchRecords(filteredObj)
                 setcurrentList(filteredObj)
             }
-            else{
+            else {
                 setsearchRecords(emptyObj)
-            } 
-        }  
-        
+            }
+        }
+
     };
 
     // handling of watch list
     const handleWatchlist = (obj) => {
         setwatchList(obj);
-        if(obj.length == 0 && isWatchList){
+        if (obj.length == 0 && isWatchList) {
             setcurrentList(obj);
         }
     };
@@ -97,7 +97,7 @@ const App = () => {
     //function when click on home page
     const homePage = () => {
         var element = document.getElementById("search-box");
-        if(element!=null){
+        if (element != null) {
             element.value = '';
         }
         setsearchRecords([]);
@@ -114,7 +114,7 @@ const App = () => {
                     openWatchList={openWatchList}
                     homePage={homePage} />
                 <Search
-                    searchKey={searchKey}/>
+                    searchKey={searchKey} />
             </div>
             <ChampionList
                 List={currentrecords}
@@ -123,7 +123,7 @@ const App = () => {
                 isWatchList={isWatchList} />
             <Pagination
                 recordsPerPage={recordsPerPage}
-                totalRecords={(isWatchList && searchRecords.length == 0) ? watchList.length : (searchRecords.length == 0) ? list.length : searchRecords.length  } 
+                totalRecords={(isWatchList && searchRecords.length == 0) ? watchList.length : (searchRecords.length == 0) ? list.length : searchRecords.length}
                 paginate={paginate}
                 currentPage={currentPage} />
 

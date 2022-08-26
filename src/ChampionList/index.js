@@ -16,7 +16,7 @@ const ChampionList = ({ List, Loading, handleWatchlist, isWatchList }) => {
 
     useEffect(() => {
         handleWatchlist(watchList);
-    },[watchList]);
+    }, [watchList]);
 
     // function to sort the list of champions
     const sortMethods = {
@@ -25,6 +25,7 @@ const ChampionList = ({ List, Loading, handleWatchlist, isWatchList }) => {
         descending: { method: (a, b) => (a.name > b.name ? -1 : 1) },
     };
 
+    // function to add and remove in watchlist
     const addremoveWatchlist = (e, champion) => {
         e.stopPropagation();
         var element = document.getElementById(champion.id);
@@ -43,14 +44,14 @@ const ChampionList = ({ List, Loading, handleWatchlist, isWatchList }) => {
             );
             element.classList.remove("show");
             element.classList.add("hide");
-            if(isWatchList)
-            {
-                var element1 = document.getElementById('div_'+champion.id);
-                element1.classList.add("hide"); 
+            if (isWatchList) {
+                var element1 = document.getElementById('div_' + champion.id);
+                element1.classList.add("hide");
             }
         }
     }
 
+    // function to open popup for particular champion details
     const checkDetails = (champion) => {
         setshowModalPopup(true);
         setcurrentChampion(champion);
@@ -61,7 +62,7 @@ const ChampionList = ({ List, Loading, handleWatchlist, isWatchList }) => {
     }
     var renderedList = '';
     if (List.length > 0) {
-         renderedList = List.sort(sortMethods[sortState].method).map((champion) => {
+        renderedList = List.sort(sortMethods[sortState].method).map((champion) => {
             if (champion.id === -1) { return <div key='-1' className="emptyMsg">{champion.text}</div> }
             const liList =
                 <div id={`div_${champion.id}`} key={champion.id}>
@@ -80,7 +81,7 @@ const ChampionList = ({ List, Loading, handleWatchlist, isWatchList }) => {
 
         })
     }
-    else if(isWatchList){
+    else if (isWatchList) {
         renderedList = <div className="emptyMsg">No items</div>
     }
 

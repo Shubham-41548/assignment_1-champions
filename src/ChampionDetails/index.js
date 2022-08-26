@@ -7,11 +7,10 @@ class ChampionDetails extends Component {
         showModal: false
     };
 
-
+    //function to close the championdetails popup
     handleClose = () => {
         this.props.onPopupClose(false);
     }
-
 
     render() {
         const{name,big_image_url,armor,armorperlevel,attackdamage,

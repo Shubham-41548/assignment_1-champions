@@ -1,0 +1,27 @@
+.form-outline{
+    padding: 1% 40% 8% 40%;
+}
+.form-control{
+    background-color: #1B4B63;
+    color: white;
+}
+.box {
+    height: 25px;
+    padding-left: 4%;
+  }
+  .autocomplete-items{
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    z-index: 99;
+    width: 20%;
+    border-radius: 5px;
+    background-color: #1B4B63;
+    color: white;
+    cursor: pointer;
+    overflow-y: scroll;
+    max-height: 50%;
+  }
+  /*when hovering an item:*/
+.box:hover {
+    background-color: rgba(25,24,32,.75);
+  }

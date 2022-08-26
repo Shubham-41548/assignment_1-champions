@@ -1,0 +1,11 @@
+.bigImg{
+    border-radius: 2%;
+}
+.champDetails{
+    display: inline-block;
+    margin-left: 15%;
+    vertical-align: middle;
+}
+.modal-content{
+    background-color: gainsboro;
+}

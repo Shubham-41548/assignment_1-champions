@@ -1,0 +1,79 @@
+.m-10{
+    padding: 0% 10% 4% 10%;
+    background-color: #211B26;
+}
+body {
+    background-color: #211B26;
+}
+.card-img-top{
+    border-radius: 50%;
+    border: 5px double;
+    border-color: grey;
+    width: 55%;
+    margin: 7%;
+    margin-left: 20%;
+}
+
+.h-100{
+    background-color: #1B4B63;
+}
+
+.card-title{
+    color: white;
+    text-align: center;
+}
+
+.col:hover
+{
+    box-shadow: 0 14px 28px rgba(248, 248, 248, 0.7);
+    cursor: pointer;
+     width: 90%; 
+     border-color: #6B172D;
+}
+.emptyMsg{
+    color: red;
+    width: auto;
+    margin-left: 50%;
+}
+.Watchlist_icon{
+    width: 18%;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 2%;
+    display: inline-block;
+    margin-left: 60%;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: inline-block;
+}
+.addBtn{
+    display: inline-block;
+}
+.removeBtn{
+    display: inline-block;
+}
+.Watchlist_added_icon{
+    display: inline-block;
+    width: 18%;
+    border-radius: 25%;
+    margin-left: 2%;
+    margin-top: 2%;
+    
+}
+.sort{
+    width: 4%;
+    margin-left: 9%;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+.sort_container{
+    background-color: #1B4B63;
+    padding: .5%;
+}
+.ml{
+    margin-left: 73%;
+}
+

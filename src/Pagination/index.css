@@ -1,0 +1,13 @@
+.pagination{
+    margin: 0;
+    padding-left: 79%;
+}
+.pgNav{
+    background-color: #211B26;
+}
+.page-link{
+    background-color: #1B4B63;
+}
+.page-number-focus{
+    background-color: var(--bs-pagination-focus-bg);
+}

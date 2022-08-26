@@ -1,0 +1,35 @@
+.header{
+    background-color: rgba(25,24,32,.75);
+    position: relative;
+}
+.pic2{
+    border-radius: 50%;
+    width: 4%;
+    margin: .5%;
+    margin-left: 3%;
+}
+.pic3{
+    margin-left: 72%;
+    position: absolute;
+}
+.headertxt
+{
+    padding-left: 1%;
+    display: inline-block;
+    font-style: italic;
+    color: white;
+}
+.pic2,.headertxt:hover
+{
+    cursor: pointer;
+}
+ .badge {
+    position: absolute;
+    top: 4px;
+    right: 62px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+  }
+

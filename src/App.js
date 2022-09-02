@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ChampionList from "./ChampionList";
+import ChampionList from "./component/ChampionList";
 import pic1 from "./assets/home_wallpaper.png"
-import Header from "./Header";
-import Search from "./Search";
-import Pagination from "./Pagination";
+import Header from "./component/Header";
+import Search from "./component/Search";
+import Pagination from "./component/Pagination";
 
 
 const App = () => {

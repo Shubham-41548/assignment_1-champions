@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './index.css';
-import pic1 from "../assets/Watchlist_icon.png";
-import pic2 from "../assets/Watchlist_added_icon.png";
-import pic3 from "../assets/sort.svg";
-import pic4 from "../assets/sort_desc.svg";
+import pic1 from "../../assets/Watchlist_icon.png"
+import pic2 from "../../assets/Watchlist_added_icon.png";
+import pic3 from "../../assets/sort.svg";
+import pic4 from "../../assets/sort_desc.svg";
 import ChampionDetails from "../ChampionDetails";
 
 

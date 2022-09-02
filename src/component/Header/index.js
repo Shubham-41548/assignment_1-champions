@@ -1,6 +1,6 @@
 import React from "react";
-import pic2 from "../assets/blue-home-icon.png";
-import pic3 from "../assets/Watchlist_icon.png";
+import pic2 from "../../assets/blue-home-icon.png";
+import pic3 from "../../assets/Watchlist_icon.png";
 import './index.css';
 
 const Header = ({ watchListObj, openWatchList, homePage }) => {
